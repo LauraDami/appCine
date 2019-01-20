@@ -1,0 +1,7 @@
+{
+  "name": "appCine",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
