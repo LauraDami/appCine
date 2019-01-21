@@ -1,14 +1,26 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>
-      Ionic Blank
+    <ion-title style = "text-align: center">
+      Estrenos de Cartelera
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <div>
+  <br>
+    <h1 style="text-align: center">
+      Cartelera
+    </h1>
+  </div>
+  <br>
+  <br>
+  <div>
+    <button ion-button (click)="goAcceso()" block>
+      Acceder
+    </button>
+    <button ion-button (click)="goRegistro()" block>
+      Registrarse
+    </button>
+  </div>
 </ion-content>

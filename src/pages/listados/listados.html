@@ -1,0 +1,54 @@
+<!--
+  Generated template for the ListadosPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{accion}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <div *ngIf="accion === 'Usuarios -- Admin'">
+    <ion-list>
+      <ion-item ion-item *ngFor="let usu of usuarios">
+        <ion-label style="text-align: center">{{usu.nombre}} {{usu.apellidos}}</ion-label>
+        <ion-checkbox item-right checked="{{usu.admin}}" color="primary" (click) = "cambiarAdmin(usu)"></ion-checkbox>
+      </ion-item>
+    </ion-list>
+  </div>
+  <div *ngIf="accion === 'Modificar'">
+    <ion-list>
+        <button ion-item *ngFor="let peli of cartelera" (click)="itemSelected(peli)">
+          {{ peli.titulo }}
+        </button>  
+      </ion-list>
+  </div>
+  <div *ngIf="accion === 'Eliminar'">
+    <ion-list>
+      <button ion-item *ngFor="let peli of cartelera" (click)="itemSelected(peli)">
+        {{ peli.titulo }}
+      </button>  
+    </ion-list>
+  </div>
+  <div *ngIf="accion === 'Cartelera'">
+    <ion-list>
+      <button ion-item *ngFor="let peli of cartelera" (click)="itemSelected(peli)">
+        {{ peli.titulo }}
+      </button>  
+    </ion-list>
+  </div>
+  <div *ngIf="accion === 'Favoritos'">
+    <ion-list>
+      <button ion-item *ngFor="let peli of usuario.favorito" (click)="itemSelected(peli)">
+        {{ peli.titulo }}
+      </button>  
+    </ion-list>
+  </div>
+</ion-content>
+
